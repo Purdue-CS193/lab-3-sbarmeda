@@ -17,14 +17,24 @@ public class StringUtils {
             Ex: res = "SFlannery"
                     --> res = "SFlanner"
          */
-        res.substring(0, 8);
+        String res1 = "";
+
+        if (res.length() > 8) {
+            res = res.substring(0, 8);
+            res = res.toLowerCase();
+
+            return res;
+        }
         /* Convert the name to lower-case
             Ex: res = "SFlanner"
                     --> res = "sflanner"
          */
-        res.toLowerCase();
-        /* return the result of our calculation */
-        return res;
+        else {
+            res1 = firstName.substring(0,1) + lastName;
+            res1 = res1.toLowerCase();
+            return res1;
+        }
+
     }
 
     /**
@@ -36,6 +46,6 @@ public class StringUtils {
      */
     public static String replaceStudentUsername(String text, String username) {
         /* Replace every instance of the username with proper message */
-        return text.replaceAll(username, "[DATA EXPUNDGED]");
+        return text.replaceAll(username, "[DATA EXPUNGED]");
     }
 }
