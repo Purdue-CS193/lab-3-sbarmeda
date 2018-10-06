@@ -1,0 +1,3 @@
+syntax enable 
+color scheme delek 
+set tabstop=4   
